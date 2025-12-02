@@ -6,12 +6,12 @@ Minimal Go HTTP server with routing, middleware, and static file support using o
 
 Build and run:
 ```bash
-go build -o server ./cmd/server && ./server
+go build -o server ./cmd/api && ./server
 ```
 
 Or run directly:
 ```bash
-go run ./cmd/server
+go run ./cmd/api
 ```
 
 Server runs on http://localhost:3000
@@ -20,7 +20,7 @@ Server runs on http://localhost:3000
 
 ```
 ├── cmd/
-│   └── server/
+│   └── api/
 │       └── main.go         # Application entry point
 ├── internal/
 │   ├── handler/            # HTTP handlers
