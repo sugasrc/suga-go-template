@@ -18,6 +18,6 @@ WORKDIR /app
 COPY --from=builder /app/server .
 COPY --from=builder /app/public ./public
 
-EXPOSE 3000
+EXPOSE 8080
 
 ENTRYPOINT ["./server"]

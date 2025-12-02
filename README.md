@@ -14,7 +14,7 @@ Or run directly:
 go run ./cmd/api
 ```
 
-Server runs on http://localhost:3000
+Server runs on http://localhost:8080
 
 ## File Structure
 
