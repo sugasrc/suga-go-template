@@ -1,57 +1,31 @@
-# <img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" height="24"> Go Template
+# <img src="https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg" height="24"> Go on Suga <img src="https://github.com/sugasrc.png" height="24">
 
-Minimal Go HTTP server with routing, middleware, and static file support using only the standard library.
+Create and deploy your Go apps to your Kubernetes cluster with Suga in minutes.
 
-## Local Development
+## Getting Started
 
-Build and run:
-```bash
-go build -o server ./cmd/api && ./server
-```
+### 1. Create your repository
 
-Or run directly:
+Click **Use this template** to create your own repository.
+
+### 2. Develop locally
+
 ```bash
 go run ./cmd/api
 ```
 
 Server runs on http://localhost:8080
 
-## File Structure
+### 3. Push your changes
+
+This triggers GitHub Actions to build and push your image to GitHub Container Registry.
+
+### 4. Update Suga
+
+In the Suga dashboard, update your service's **Image URI** to:
 
 ```
-├── cmd/
-│   └── api/
-│       └── main.go         # Application entry point
-├── internal/
-│   ├── handler/            # HTTP handlers
-│   │   ├── health.go
-│   │   ├── user.go
-│   │   └── json.go
-│   └── middleware/         # HTTP middleware
-│       └── logging.go
-├── public/                 # Static files
-├── go.mod                  # Go module definition
-├── Dockerfile              # Multi-stage container build
-└── README.md
+ghcr.io/YOUR_USERNAME/YOUR_REPO:latest
 ```
 
-## API Endpoints
-
-- `GET /` - Serves static files from public/
-- `GET /health` - Returns `{"status": "ok"}`
-- `GET /users` - Returns `{"message": "respond with a resource"}`
-
----
-
-## <img src="https://github.com/sugasrc.png" height="20"> Deploying with Suga
-
-1. Click **Use this template** to create your own repository
-
-2. Push changes - GitHub Actions builds and pushes to GHCR automatically
-
-3. In the Suga dashboard, update the **Image URI** for your service:
-   ```
-   ghcr.io/YOUR_USERNAME/YOUR_REPO:latest
-   ```
-
-4. Ensure your GHCR package is public
+> **Note:** Ensure your GHCR package is public.
