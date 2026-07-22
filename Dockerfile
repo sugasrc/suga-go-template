@@ -10,6 +10,8 @@ COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o server ./cmd/api
 
+RUN echo hello
+
 # Runtime stage
 FROM scratch
 
